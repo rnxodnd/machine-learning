@@ -15,3 +15,9 @@ predict(reg1, data.frame(x=c(3000,4000)))
 
 reg2 <- lm(x ~ y, data = df1)
 predict(reg2, data.frame(y=c(150))) 
+
+df1$y_hat <- reg1$fitted.values
+
+df1$잔차 <- reg1$residuals
+
+sum(df1$잔차)
